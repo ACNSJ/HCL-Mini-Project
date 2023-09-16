@@ -1,0 +1,92 @@
+body{
+    background:url(/modules/Images/mountains.jpg);
+    width: auto;
+    height: auto;
+    background-size:2000px;
+    background-repeat: no-repeat;
+    }
+.Want{
+    display:inline;
+    background-color: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    border-radius: 20px;
+    width: 400px;
+    height:auto;
+    text-align: center;
+    padding: 20px 30px;
+    border: 1px solid white;
+    backdrop-filter:blur(40px);
+    box-shadow: 0 0 30px rgb(0,0,0,1);
+}
+.Want input{
+    height: 40px;
+    width: 97%;
+    margin: 0px;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px;
+    font-size: larger;
+    color: white;
+    border:none;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid gray;
+    backdrop-filter:blur(20px);
+    
+}
+.Want input:hover{
+    border-color:white;
+    box-shadow: 0 0 10px rgb(0,0,0,0.5);
+}
+.Want input::placeholder{
+    color: white;
+    border-color:white;
+    text-align: center;
+    background-color: none;
+    background-repeat: 1;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Want h3 {
+    padding-top: 40px;
+    font-size: x-large;
+    padding: 0%;
+    color: white ;
+    margin: 10px;
+    font-size: xx-large; 
+    font-style: italic;
+    font-weight: 700;
+
+}
+.Want button{
+    width: 99%;
+    height: 55px;
+    border: none;
+    outline: none;
+    background-color:rgb(231, 151, 2);
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    margin-top:10px ;
+    margin-bottom: 5px;
+    padding: 10p 10px 10px;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+.Want button:hover{
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgb(0,0,0,0.5);
+}
+
+.Want a{
+    text-decoration:solid;
+    width: max-content;
+    color: rgb(231, 229, 229);
+}
+.Want A:hover{
+    color:white;
+}
