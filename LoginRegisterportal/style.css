@@ -4,6 +4,7 @@ body{
     height: auto;
     background-size:2000px;
     background-repeat: no-repeat;
+    background-color: rgb(235, 107, 52);
     }
 .Want{
     display:inline;
@@ -43,7 +44,7 @@ body{
     box-shadow: 0 0 10px rgb(0,0,0,0.5);
 }
 .Want input::placeholder{
-    color: white;
+    color:lightgray;
     border-color:white;
     text-align: center;
     background-color: none;
@@ -83,10 +84,17 @@ body{
 }
 
 .Want a{
-    text-decoration:solid;
+    font-size: medium;
     width: max-content;
     color: rgb(231, 229, 229);
+    text-decoration: none;
 }
-.Want A:hover{
+.Want a:hover{
     color:white;
+    font-style: italic;
+}
+.Want img{
+    width: 200px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px #000;
 }
