@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="portal.js"></script>
     <link rel="stylesheet" href="style.css">
+    
     <title>Guessiz Login</title>
 </head>
-<body>
-    <form action="">
+<body>  
+    <form>
     <div class="Want">
         <img src="/modules/Images/Logo.jpg" alt="">
         <h3>Username/Email ID</h3>
-        <div><input type="text" placeholder="Username/Email">
+        <div><input id="lname" type="text" placeholder="Username/Email">
         </div><h3>Password</h3>
-        <input type="password" placeholder="Password" >
-        <button type="submit" onclick="alert('Account Created')">Login</button>
+        <input id="lpassword" type="password" placeholder="Password" >
+        <button id="bt1" type="submit" >Login</button>
         <a class="LR" href="Registration.html">>>Want to Register </a>
     </div>
-    </form>    
+    </form> 
+
+    <script src="portal.js">
+    </script>
+        <script>
+            function mak(){
+            console.log(lname.value,lpassword.value);
+        }
+            bt1.addEventListener('click',mak);
+        </script>
+    
 </body>
 </html>
