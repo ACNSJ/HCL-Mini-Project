@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "mongodb": "^6.1.0"
+  },
+  "name": "hcl-mini-project",
+  "description": "Submission for HCL Mini project",
+  "version": "1.0.0",
+  "main": "dummy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACNSJ/HCL-Mini-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ACNSJ/HCL-Mini-Project/issues"
+  },
+  "homepage": "https://github.com/ACNSJ/HCL-Mini-Project#readme"
+}
