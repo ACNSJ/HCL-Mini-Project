@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/modules/index.js"></script>
+
+    <title>Guessiz Login</title>
+</head>
+<body class="Login">
+    <%- include('./dashboard.ejs') %>
+    <div class="Want">
+       <h1> Welcome To Guessiz 
+        <br><% if (name!=null) { %>
+            <%=name%> 
+        <% } %></h1>
+        <a href='/home'><img class='Logo'src="/modules/Images/Logo.jpg" alt="Logo"></a>
+        
+    </div>
+</body>

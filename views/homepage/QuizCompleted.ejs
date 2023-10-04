@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Completed</title>
+</head>
+<body class="Login">
+    <%- include('./dashboard.ejs') %>
+    <form action="/home/quizcompleted" method="post">
+    <div class="Want">
+        <h1>
+            Quiz Completed
+        </h1>
+        <h1>
+            <%= sub %>
+        </h1>
+        <h1>
+            <% if (name!=undefined) { %>
+                <%=name%> 
+            <% } %>
+        </h1>
+        <h1>
+            <%= ca %>/<%= l %>
+            Are Correct
+        </h1>
+
+    </div>
+</form>
+</body>
