@@ -10,6 +10,13 @@ const questionSchema = new mongoose.Schema({
     answer:String,
     code:String
 })
+const answerschema = new mongoose.Schema({
+    ca:String,
+    l:String,
+    anscode:String,
+    code:String
+})
+const Answer = mongoose.model('Answer',answerschema)
 
 const Question = mongoose.model('Question',questionSchema)
 // All 
@@ -71,10 +78,14 @@ router.post('/quiz',async(req,res)=>{
     l=l.toString()
     l=l.replace(' ','')
     code=await Question.find({code:l})
-    if(req.body.len==0){
+    anscode=Math.floor(Math.random()*(10**4))
+    if(req.body.len==0)
+    
+    {
         res.render('homepage/QuizCompleted',{
             ca:no,
-            l:code.length
+            l:code.length,
+            sub:anscode
         }) 
     }
     else{
@@ -113,7 +124,7 @@ router.post('/home',async(req,res)=>{
     y=JSON.stringify(l)
     y=JSON.parse(y)
     r=y.split('\n\r');
-    l=Question.find({code:req.body.code})
+    l= await Question.find({code:req.body.code})
     if(l==true)
     {
         res.render('homepage/QuizCreate',{
