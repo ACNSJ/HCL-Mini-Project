@@ -1,11 +1,16 @@
 body{
     background:url(/modules/Images/mountains.jpg);
     width: auto;
-    height: auto;
+    height: fit-content;
     background-size:2000px;
     background-repeat: no-repeat;
     background-color: rgb(235, 107, 52);
     }
+.Login{
+    height: fit-content;
+    width: fit-content;
+}
+
 .Want{
     display:inline;
     background-color: none;
@@ -14,15 +19,24 @@ body{
     top:50%;
     left: 50%;
     border-radius: 20px;
-    width: 400px;
+    width: auto;
     height:auto;
+    max-width: 1750px;
     text-align: center;
     padding: 20px 30px;
     border: 1px solid white;
     backdrop-filter:blur(40px);
     box-shadow: 0 0 30px rgb(0,0,0,1);
 }
-.Want input{
+.Want h1{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: white;
+    font-size: 45px;
+}
+.Login .Want ul{
+    list-style: none;
+}
+.Login .Want input{
     height: 40px;
     width: 97%;
     margin: 0px;
@@ -39,11 +53,11 @@ body{
     backdrop-filter:blur(20px);
     
 }
-.Want input:hover{
+.Login .Want input:hover{
     border-color:white;
     box-shadow: 0 0 10px rgb(0,0,0,0.5);
 }
-.Want input::placeholder{
+.Login .Want input::placeholder{
     color:lightgray;
     border-color:white;
     text-align: center;
@@ -52,7 +66,7 @@ body{
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.Want h3 {
+.Login .Want h3 {
     padding-top: 40px;
     font-size: x-large;
     padding: 0%;
@@ -63,7 +77,7 @@ body{
     font-weight: 700;
 
 }
-.Want button{
+.Login .Want button{
     width: 99%;
     height: 55px;
     border: none;
@@ -78,23 +92,62 @@ body{
     font-size: larger;
     margin-bottom: 20px;
 }
-.Want button:hover{
+.Login .Want button:hover{
     border: 1px solid white;
     box-shadow: 0 0 10px rgb(0,0,0,0.5);
 }
 
-.Want a{
+.Login .Want a{
     font-size: medium;
     width: max-content;
     color: rgb(231, 229, 229);
     text-decoration: none;
 }
-.Want a:hover{
+.Login .Want a:hover{
     color:white;
     font-style: italic;
 }
-.Want img{
+.Login .Want img{
     width: 200px;
     border-radius: 100px;
     box-shadow: 0 0 10px #000;
+}
+.Dashboard{
+    position: absolute;
+    align-items: start;
+    text-decoration: none;
+    width:100%;
+    flex-wrap: wrap;
+    background-color: black;
+    text-align: center;
+    border-radius: 60px;
+
+}
+.Dashboard a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    padding: 30px 30px 30px 30px;
+}
+.Dashboard ul li a:hover{
+    background-color: white;
+    color: black;
+}
+.Dashboard ul{
+    display: 'flex';
+    list-style: none;
+}
+.Dashboard ul li{
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px ;
+    
+}
+.Want textarea {
+    width: 1000px;
+    height:200px;
+    margin-bottom: 0%;
+    align-self: center;
+    position:static;
+    font-size:large
 }

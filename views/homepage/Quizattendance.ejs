@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Attendance</title>
+</head>
+<body class="Login">
+    <%- include('./dashboard.ejs') %>
+    <form action="/quizattendance" method="get">
+    <div class="Want">
+        <h3>Enter Code to access</h3> 
+        <input name="code" id="code" type="text" >                
+        <button type="submit" style="height: 60px; background-color: coral; color: white;">Submit</button>
+        <h3><% if (locals.errorMessage !=null) { %>
+            <%= errorMessage %>
+            <% } %></h3>
+    </div>
+</form>
+</body>

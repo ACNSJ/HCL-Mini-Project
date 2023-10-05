@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body style="    background:url(/modules/Images/mountains.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+background-color:orange">
+    <form action="/quiz" method="post">
+    <div style="    display:inline;
+    background-color: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    border-radius: 20px;
+    width: 900px;
+    height: 900px;;
+    max-width: 2500px;
+    text-align: center;
+    padding: 20px 30px;
+    border: 1px solid white;">
+    <h1 id="question"><% if (locals.question !=null) { %>
+        <%= question %>
+        <% } else { %>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptatem vero consequatur voluptate distinctio necessitatibus incidunt repellendus tempora et recusandae, sed, ipsa eum minus earum? Illum recusandae eligendi laudantium aliquid.
+        <% } %>
+         </h1>
+    <button type="button" id="op1">
+        <% if (locals.op1 !=null) { %>
+            <%=op1  %>
+            <% } else { %>
+                op1
+            <% } %>
+    </button><br>
+    <button type="button"id="op2" >
+        <% if (locals.op2 !=null) { %>
+            <%=op2  %>
+            <% } else { %>
+                op2
+            <% } %>
+    </button><br>
+    <button type="button"id="op3">
+        <% if (locals.op3 !=null) { %>
+            <%=op3  %>
+            <% } else { %>
+                op3
+            <% } %>
+    </button><br>
+    <button type="button" id="op4">
+        <% if (locals.op4 !=null) { %>
+            <%=op4  %>
+            <% } else { %>
+                op4
+            <% } %>
+    </button><br>
+    
+        <style>
+            #code{
+                font-size: 1px;
+                padding: 1px 1px 1px 1px;
+                background-color: transparent;
+            }
+            h1{
+                color: white;
+                
+                
+            }
+            input{
+                text-align: center;
+                color: white;
+                background-color: orange;
+                height: fit-content;
+                width: fit-content;
+                font-size: large;
+                border-radius: 15px;
+                border-color: white;
+                margin: 10px;
+                padding: 5px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: x-large;
+
+            }
+            button{
+                color: white;
+                background-color: transparent;
+                height: fit-content;
+                width: fit-content;
+                font-size: large;
+                border-radius: 15px;
+                border: transparent;
+                margin: 10px;
+                padding: 5px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: x-large;
+            }
+        </style>
+        <input id="user" name="ca" autofocus placeholder="Option alone Example:a" style="padding: 10px;height: auto;border-radius: 20px;">
+        <h1>Questions Remaining</h1>
+    <h1><input readonly  name="len" value="<%=length%>" style="border-color: transparent;width: fit-content;height: fit-content;"></h1>   
+    <h1>Code<br><input readonly id="lep" name="code" value="<%=code%>" style="border-color: transparent;"></h1>
+    <h1><input readonly id="code" name="ans" value="<%=ans%>" style="border-color: transparent;color: transparent;"></h1>
+    <h1><input readonly id="code" name="ano" value="<%=ano%>" style="border-color: transparent;color: transparent;"></h1>
+    <button id="bt1" type="submit" style="background-color: orange;" >Next</button>
+
+    <style>
+        #code:hover{
+            box-shadow: none;
+        }
+    </style>    
+</div>
+</form>
+</body>
+</html>

@@ -22,14 +22,17 @@ c) Deforestation
 d) Pesticide use`
 
 
-function QuestionCreate(str) {
+function QuestionCreate(str) 
+{
     qa=str.split("\n\n\n")
-    for(let i=0;i<qa.length;i++){
+    for(let i=0;i<qa.length;i++)
+    {
         var l=qa[i].split("\n\n")
         for(let j=0;j<l[1].length;j++)
         {
             var a=l[1].split("\n")
-            for(let k=0;k<a.length;k++){
+            for(let k=0;k<a.length;k++)
+            {
                 var b=a[k]
                 var o=a[k]
                 var n=b.length
@@ -42,9 +45,11 @@ function QuestionCreate(str) {
                 
             }
             if(o.endsWith("Ans"))
-                {   o=o.replace("-Ans","");
+            {   o=o.replace("-Ans","");
                     break;
-                }
-        }   }
+            }
+        }  
     }
-QuestionCreate(str);
+}
+
+module.exports = QuestionCreate;

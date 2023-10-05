@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <title>Guessiz Registration</title>
+</head>
+<body class="Login">
+    <form action='/portal/login' method="post">
+        <di class="Want">
+        <img src="/modules/Images/Logo.jpg" alt="Logo">
+        <h3>Username</h3>
+        <input name="rname"  type="text" placeholder="Username" >
+        <h3>Email ID</h3>
+        <input name="email" id="email" type="email" placeholder="example@abc.com" >
+        <h3>Password</h3>
+        <input name="rpassword" id="rpassword" type="password" placeholder="Password" >
+        <h3>Confirm Password</h3>
+        <input name="rcpassword" id="rcpassword" type="password" placeholder="Confirm Password" >
+        <button id="bt2" type="submit" >Confirm</button>
+        <a href="login">>>Want to Login </a>
+        </div>
+        <h3><%- include('./error.ejs') %></h3>
+    </form>  
+    
+    <script src="/LoginRegisterportal/Node/Register.js"></script> 
+</body>
+</html>

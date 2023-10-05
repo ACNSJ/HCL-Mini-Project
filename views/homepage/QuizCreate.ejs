@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Creation</title>
+</head>
+<body class="Login">
+    <%- include('./dashboard.ejs') %>
+    <div class="Want">
+        <form action ="/home" method="post">
+            
+        <h3>Please enter your questions here
+            Format is given below
+        </h3> 
+
+        <textarea  name="question" id="questions" cols='40' rows="10" 
+        style="scrollbar-color:grey;" placeholder="
+        Which of the following is a biodiversity hotspot known for its unique and diverse ecosystem?
+        a) Sahara Desert
+        b) Thar Desert
+        c) Amazon Rainforest-Ans
+        d) Antarctica
+        
+        What is the process by which plants convert carbon dioxide and sunlight into energy and oxygen?
+        a) Respiration
+        b) Photosynthesis-Ans
+        c) Combustion
+        d) Fermentation
+        
+        Which of the following is a sustainable farming technique that conserves soil and water resources?
+        a) Monoculture
+        b) Organic farming-Ans
+        c) Deforestation
+        d) Pesticide use"></textarea>
+        <ul>
+            <li>
+                <h3>Subject</h3> 
+                <input name="subject" id="subject" type="text" >
+                <h3>Code</h3> 
+                <input name="code" id="code" type="text" >                
+                <input type="submit" style="height: 60px; background-color: coral;">
+            </li>
+
+        </ul>
+        <h3><% if (locals.errorMessage !=null) { %>
+            <%= errorMessage %>
+            <% } %></h3>
+
+    
+    </form>
+    <button type="submit" onclick="cl()">Random Code</button>
+</div>
+
+</body>
+<script>
+    function cl(){
+        a=document.getElementById('code')
+        b=Math.floor(Math.random()*(10**6))
+        a.value=b}
+        
+</script>
