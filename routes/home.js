@@ -54,7 +54,7 @@ router.get('/quizattendance',async(req,res)=>{
             op3: op[2],
             op4: op[3],
             code:req.query.code,
-            length:code.length,ans:c['answer'],
+            length:code.length-1,ans:c['answer'],
             ca:0,ano:0
         })
 
@@ -74,22 +74,21 @@ router.post('/quiz',async(req,res)=>{
         no=no+1
     }
     console.log(no);
-    l=req.body.code
-    l=l.toString()
-    l=l.replace(' ','')
-    code=await Question.find({code:l})
+    lz=req.body.code
+    lz=lz.toString()
+    lz=lz.replace(' ','')
+    code=await Question.find({code:lz})
     anscode=Math.floor(Math.random()*(10**4))
     if(req.body.len==0)
     
     {
         res.render('homepage/QuizCompleted',{
             ca:no,
-            l:code.length,
+            length:code.length,
             sub:anscode
         }) 
     }
     else{
-    code=await Question.find({code:l})
     a=req.body.len
     b=req.body.op4
     a=parseInt(a)

@@ -72,7 +72,7 @@ router.post('/index',async(req,res)=>{
 }
 catch(err){
     res.render('portal/Login',{
-        errorMessage:'Error No Person Found'})
+        errorMessage:'Error No User Found'})
 }
 })
 

@@ -11,7 +11,7 @@
     <%- include('./dashboard.ejs') %>
     <div class="Want">
        <h1> Welcome To Guessiz 
-        <br><% if (name!=null) { %>
+        <br><% if (locals.name!=null) { %>
             <%=name%> 
         <% } %></h1>
         <a href='/home'><img class='Logo'src="/modules/Images/Logo.jpg" alt="Logo"></a>
